@@ -1,14 +1,7 @@
-eureka:
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-            ---
-      spring:
-        profiles: peer
-      eureka:
-        instance:
+spring:
+  profiles: peer
+    eureka:
+    instance:
           hostname: ${APP_NAME}.herokuapp.com
         client:
           registerWithEureka: true
